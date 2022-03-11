@@ -22,6 +22,33 @@ Rails.application.routes.draw do
   get 'about' => "about#index"
   
 
+
+
+  # GifVault::Application.routes.draw do
+    
+    # This route sends requests to our naked url to the *cool* action in the *gif* controller.
+
+    get '/login' => 'sessions#new'
+    post '/login' => 'sessions#create'
+    get '/logout' => 'sessions#destroy'
+
+    get '/signup' => 'users#new'
+    post '/users' => 'users#create'
+    
+    # These routes will be for signup. The first renders a form in the browse, the second will 
+    # receive the form and create a user in our database using the data given to us by the user.
+    get '/signup' => 'users#new'
+    post '/users' => 'users#create'
+
+# end
+
+
+
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
