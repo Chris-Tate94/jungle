@@ -1,12 +1,5 @@
 require 'rails_helper'
 
-# class User; end
-
-# describe User do
-#   subject { described_class }
-#   it { is_expected.to eq(User) }
-# end
-
 RSpec.describe Product, type: :model do
   
   category = Category.find_or_create_by!(:name => "electronics")
